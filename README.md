@@ -1,27 +1,39 @@
-# Automated Deployment Optimization & Run-Time Lifecycle Persistence
+## 📸 Project Evolution & Milestone Gallery
 
-An enterprise-grade DevOps case study focusing on decoupling asynchronous server runtimes from synchronous automation pipeline engines on Amazon Web Services (AWS).
+<details>
+<summary><b>Phase 1: Local Baseline & Manual Infrastructure Evolution (Snapshots 1-5)</b></summary>
+<br>
 
-## 🗺️ System Architecture Blueprint
-The diagram below illustrates the continuous delivery data flow, security boundaries, and execution contexts used to decouple and persist the web application tier.
+### 1. Core Service Architecture Definition
+![Local Application Created](screenshots/01-application-created.png)
+*Caption: Defining core Express routing logic and environment variables inside the local code editor workspace.*
 
+### 2. Local Environment Verification
+![Application Running Locally](screenshots/02-application-running-locally.png)
+*Caption: Local sandbox verification loop running successfully on localhost:3000 prior to cloud staging.*
 
+### 3. Manual Compute Artifact Ingestion
+![Manual Secure Copy Process](screenshots/03-manual-deployment-process.png)
+*Caption: Using the Secure Copy Protocol (SCP) to manually inject local application builds over an encrypted SSH channel to the remote AWS EC2 host instance.*
 
-### Cloud Services Inventory
-| Service Component | Functional Role | Infrastructure Implementation Specifications |
-| :--- | :--- | :--- |
-| **AWS EC2** | Compute Node | Hosts the production `legacy-manual-web-server` virtual host instance running Amazon Linux. |
-| **AWS CodeDeploy** | Automation Engine | Orchestrates revision hooks via `appspec.yml` and pushes application builds natively onto target nodes. |
-| **AWS IAM** | Identity Management | Attaches an instance execution profile role onto the host server to authorize trust communication patterns. |
-| **AWS Security Group** | Stateful Firewall | Sets rigorous ingress authorization limits: TCP Port `22` (SSH management) and TCP Port `3000` (Application Traffic). |
-| **PM2 Engine** | Process Management | Acts as an unlinked runtime abstraction layer to daemonize, track, and monitor background processes. |
+### 4. Initial Live Cloud Handshake
+![Live Web Instance Verification](screenshots/04-ssh-deployment.png)
+*Caption: Browser verification confirming the manually deployed application is successfully running live on the public AWS EC2 IP address.*
 
----
+### 5. Production Process Environment Upgrade
+![Manual Process Upgrade Implementation](screenshots/05-manual-upgrade-running.png)
+*Caption: Active remote SSH terminal environment establishing and validating the execution of background process configurations directly on the host machine.*
+</details>
 
-## 🚨 Root Cause Analysis & Incident Failure Report
+<details>
+<summary><b>Phase 2: Automated Orchestration & Validation (Snapshots 6-7)</b></summary>
+<br>
 
-### 📉 The Incident Profile
-- **Symptom:** The AWS CodeDeploy agent reported a green **Success** state upon finishing execution, but the site was completely unreachable over the public network (`ERR_CONNECTION_TIMED_OUT`).
-- **Initial Execution Trap:** ```bash
-  # Inside initial scripts/start_server.sh:
-  node app.js
+### 6. Automated Infrastructure Synchronization Passes
+![AWS CodeDeploy Progress Status](screenshots/06-codedeploy-success-console.png)
+*Caption: AWS CodeDeploy orchestration dashboard processing lifecycle deployment events successfully over target nodes.*
+
+### 7. Unified 3-Window Telemetry & Result Verification
+![Decoupled Production Grid Dashboard](screenshots/07-pipeline-success-verification.png)
+*Caption: Final engineering validation. Left: Remote curl request yielding a clean HTTP 200 OK status. Top-Right: Persistent process daemon table keeping the decoupled instance online. Bottom-Right: Command prompt window confirming the desired outcome.*
+</details>
