@@ -46,23 +46,23 @@ pm2 start app.js --name "legacy-manual-web-server"
 ### Phase 1: Local Baseline & Manual Infrastructure Evolution
 
 #### 1. Core Service Architecture Definition
-![01-application-created](https://github.com/user-attachments/assets/c8d940ac-b41a-426f-9546-fac279e8cc00)
+![01-application-created](01-application-created.png)
 *Caption: Defining core Express routing logic and environment variables inside the local code editor workspace.*
 
 #### 2. Local Environment Verification
-![02-application-running-locally](https://github.com/user-attachments/assets/53aa4955-56b5-4312-b953-71c2fc8d9ee6)
+![02-application-running-locally](02-application-running-locally.png)
 *Caption: Local sandbox verification loop running successfully on localhost:3000 prior to cloud staging.*
 
 #### 3. Manual Compute Artifact Ingestion
-![03-manual-deployment-process](https://github.com/user-attachments/assets/e1fe9f4d-380b-4e11-b5eb-1399751488f8)
+![03-manual-deployment-process](03-manual-deployment-process.png)
 *Caption: Using the Secure Copy Protocol (SCP) to manually inject local application builds over an encrypted SSH channel to the remote AWS EC2 host instance.*
 
 #### 4. Initial Live Cloud Handshake
-![04-ssh-deployment](https://github.com/user-attachments/assets/0a142a20-9053-471c-8f91-ead67d54b387)
+![04-ssh-deployment](04-ssh-deployment.png)
 *Caption: Browser verification confirming the manually deployed application is successfully running live on the public AWS EC2 IP address.*
 
 #### 5. Production Process Environment Upgrade
-![05-manual-upgrade-running](https://github.com/user-attachments/assets/6df04895-fe3d-483b-8878-cac833c496f7)
+![05-manual-upgrade-running](05-manual-upgrade-running.png)
 *Caption: Active remote SSH terminal environment establishing and validating the execution of background process configurations directly on the host machine.*
 
 ---
@@ -70,11 +70,11 @@ pm2 start app.js --name "legacy-manual-web-server"
 ### Phase 2: Automated Orchestration & Validation
 
 #### 6. Automated Infrastructure Synchronization Passes
-![06-pipeline-success](https://github.com/user-attachments/assets/12056a16-e247-4118-8f1a-1ec1fd97f7f5)
+![06-pipeline-success](06-codedeploy-success-console.png)
 *Caption: AWS CodeDeploy orchestration dashboard processing lifecycle deployment events successfully over target nodes.*
 
 #### 7. Unified 3-Window Telemetry & Result Verification
-![07-pipeline-success-verification](https://github.com/user-attachments/assets/2c79cb9a-47a0-48b2-a064-622e8819a027)
+![07-pipeline-success-verification](07-pipeline-success-verification.png)
 *Caption: Final engineering validation. Left: Remote curl request yielding a clean HTTP 200 OK status. Top-Right: Persistent process daemon table keeping the decoupled instance online. Bottom-Right: Command prompt window confirming the desired outcome.*
 
 ## 🚀 Decommissioning & Cost Optimization Ledger
